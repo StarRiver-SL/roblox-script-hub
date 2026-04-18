@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Script Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="zh">简体中文</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div id="auth-section" class="card">
+            <h2 id="auth-title">Login / Register</h2>
+            <div class="tabs">
+                <button id="login-tab" class="active">Login</button>
+                <button id="register-tab">Register</button>
+            </div>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="text" id="invite-code" placeholder="Invite Code (for register)" style="display:none;">
+                <button type="submit" id="auth-submit">Login</button>
+            </form>
+            <p id="auth-message"></p>
+        </div>
+        <div id="dashboard-section" class="card" style="display:none;">
+            <h2 id="dashboard-title">Dashboard</h2>
+            <p id="welcome-message"></p>
+            <div class="upload-area">
+                <h3>Upload Lua Script</h3>
+                <select id="obfuscation-method">
+                    <option value="custom">Custom Obfuscator</option>
+                    <option value="prometheus">Prometheus (Advanced)</option>
+                </select>
+                <input type="file" id="script-file" accept=".lua,.txt">
+                <button id="upload-btn">Upload & Obfuscate</button>
+                <p id="upload-status"></p>
+            </div>
+            <div class="scripts-list">
+                <h3>Your Scripts</h3>
+                <ul id="scripts-ul"></ul>
+            </div>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
